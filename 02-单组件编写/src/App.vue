@@ -1,17 +1,15 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+  <h1>App.vue</h1>
+  <Home />
+  <Component1 />
 </template>
 
-<style lang="stylus">
-#app
-  font-family Avenir, Helvetica, Arial, sans-serif
-  -webkit-font-smoothing antialiased
-  -moz-osx-font-smoothing grayscale
-  text-align center
-  color #2c3e50
-  margin-top 60px
-</style>
+<script lang="ts">
+import { defineComponent } from "@vue/runtime-core";
+import Home from "./views/Home.vue";
+import Component1 from "./components/component-1.vue";
+
+export default defineComponent({
+  components: { Home, Component1 },
+})
+</script>
